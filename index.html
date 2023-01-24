@@ -11,37 +11,453 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap"
       rel="stylesheet"
     />
-    <title>Primer ejemplo en HTML</title>
+    <title>Portafolio</title>
   </head>
   <body>
-    <h1>Título 1</h1>
-    <h2>Título 2</h2>
-    <h3>Título 3</h3>
-    <h4>Título 4</h4>
-    <h5>Título 5</h5>
-    <h6>Título 6</h6>
-    <p>Hola Mundo</p>
-
-    <div class="cuadro">
-      <video
-        width="300"
-        height="200"
-        controls
-        src="./assets/Mujer - 58142.mp4"
-      ></video>
-
-      <span>Belleza y Aire libre</span>
+    <div class="contenedor-header">
+      <header>
+        <div class="logo">
+          <a href="#">Veronica</a>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+            <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+            <li>
+              <a href="#destacados" onclick="seleccionar()">DESTACADOS</a>
+            </li>
+            <li>
+              <a href="#curriculum" onclick="seleccionar()">CURRICULUM</a>
+            </li>
+            <li><a href="portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+            <li><a href="contactame" onclick="seleccionar()">CONTACTAME</a></li>
+          </ul>
+        </nav>
+        <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </header>
     </div>
 
-    <div class="cuadro">
-      <span>tic-toc tecnology</span>
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+      <div class="contenido-banner">
+        <div class="contenedor-img">
+          <img src="./assets/B6SUOQA45NHPPPD7DUXIVEALQI.jpg" alt="" />
+        </div>
+        <h1>Veronica Marcela</h1>
+        <h2>Ingeniera en Sistemas - Experta en Frontend/Bootstrap</h2>
+        <!-- ICONOS REDES SOCIALES -->
+        <div class="redes-sociales">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-skipe"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href=""><i class="fa-brands fa-rss"></i></a>
+        </div>
+      </div>
+    </section>
 
-      <img
-        src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/B6SUOQA45NHPPPD7DUXIVEALQI.jpg"
-        alt="imagen de tic-toc"
-        width="300"
-        height="200"
-      />
-    </div>
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+      <div class="contenido-seccion">
+        <h2>Sobre Mí</h2>
+        <p>
+          <span>Hola, soy Veronica Marcela.</span> Destacada por jefes y
+          compañeros, en: Toma de requerimientos con el cliente, diagrama de
+          flujo, diseño de bocetos, análisis de comportamiento deseado mediante
+          áreas clickeables; testeo de fallas - Diseño de aplicaciones y soporte
+          técnico a clientes - Desarrollo full Frontend utilizando Javascript,
+          CSS3, HTML5, Bootstrap.
+        </p>
+
+        <div class="fila">
+          <!-- datos personales -->
+          <div class="col">
+            <h3>Datos Personales</h3>
+            <ul>
+              <li>
+                <strong>Fecha de Nacimiento</strong>
+                22-07-1975
+              </li>
+              <li>
+                <strong>Teléfono</strong>
+                +54 911 5678-9012
+              </li>
+              <li>
+                <strong>Email</strong>
+                veronicamarcela@example.com.ar
+              </li>
+              <li>
+                <strong>Página Web</strong>
+                www.veronicamarcela.com.ar
+              </li>
+              <li>
+                <strong>Dirección</strong>
+                5678 - Buenos Aires, Argentina
+              </li>
+              <li>
+                <strong>Cargo</strong>
+                <span>FRONTEND DEVELOPER SENIOR</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- intereses -->
+          <div class="col">
+            <h3>Intereses</h3>
+            <div class="contenedor-intereses">
+              <div class="interes">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>JUEGOS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-headphones"></i>
+                <span>ARTE</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-plane"></i>
+                <span>VIAJAR</span>
+              </div>
+              <div class="interes">
+                <i class="fa-brands fa-apple"></i>
+                <span>SISTEMAS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-person-hiking"></i>
+                <span>DEPORTE</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-book"></i>
+                <span>LECTURAS</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-car"></i>
+                <span>VIAJES</span>
+              </div>
+              <div class="interes">
+                <i class="fa-solid fa-camera"></i>
+                <span>FOTOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button>
+          Descargar CV <i class="fa-solid fa-download"></i>
+          <span class="overlay"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SECCION HABILIDADES -->
+    <section class="skills" id="skills">
+      <div class="contenido-seccion">
+        <h2>Skills</h2>
+        <div class="fila">
+          <!-- Technical Skill -->
+          <div class="col">
+            <h3>Technical Skills</h3>
+            <div class="skill">
+              <span>Javascript</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>HTML & CSS</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>89%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Bootstrap</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>95%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Wordpress</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>81%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Sass</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>55%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Professional Skills -->
+          <div class="col">
+            <h3>Professional Skills</h3>
+            <div class="skill">
+              <span>Comunicación</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Trabajo en Equipo</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Creatividad</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>99%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Dedicación</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill">
+              <span>Proyect Management</span>
+              <div class="barra-skill">
+                <div class="progreso">
+                  <span>94%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+      <div class="contenido-seccion">
+        <h2>Curriculum</h2>
+        <div class="fila">
+          <div class="col izquierda">
+            <h3>Educación</h3>
+            <div class="item izq">
+              <h4>Arte y Multimedia</h4>
+              <span class="casa">Universidad de Oxford</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Arte y Multimedia</h4>
+              <span class="casa">Universidad de Oxford</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+            <div class="item izq">
+              <h4>Arte y Multimedia</h4>
+              <span class="casa">Universidad de Oxford</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectori">
+                <div class="circuloi"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col derecha">
+            <h3>Experiencia de trabajo</h3>
+            <div class="item der">
+              <h4>Front Developer</h4>
+              <span class="casa">Nombre de Compañía</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+            <div class="item der">
+              <h4>Front Developer</h4>
+              <span class="casa">Nombre de Compañía</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+            <div class="item der">
+              <h4>Front Developer</h4>
+              <span class="casa">Nombre de Compañía</span>
+              <span class="fecha">2005 - 2008</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis,
+                cumque repellat, tempora recusandae aliquam nemo esse natus
+                impedit, nostrum temporibus veritatis eaque soluta aperiam id
+                repudiandae fugiat deserunt! Explicabo, veritatis?
+              </p>
+              <div class="conectord">
+                <div class="circulod"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+      <div class="contenido-seccion">
+        <h2>PORTFOLIO</h2>
+        <div class="galeria">
+          <div class="proyecto">
+            <img src="img/p1.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <img src="img/p2.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <img src="img/p3.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <img src="img/p4.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <img src="img/p5.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+          <div class="proyecto">
+            <img src="img/p6.jpg" alt="" />
+            <div class="overlay">
+              <h3>Diseño Creativo</h3>
+              <p>Fotografía</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+      <div class="contenido-seccion">
+        <h2>CONTACTO</h2>
+        <div class="fila">
+          <!-- Formulario -->
+          <div class="col">
+            <input type="text" placeholder="Tu Nombre" />
+            <input type="text" placeholder="Número telefónico" />
+            <input type="text" placeholder="Dirección de correo" />
+            <input type="text" placeholder="Tema" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Mensaje"
+            ></textarea>
+            <button>
+              Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+              <span class="overlay"></span>
+            </button>
+          </div>
+          <!-- Mapa -->
+          <div class="col">
+            <img src="./assets/mapa.png" alt="" />
+            <div class="info">
+              <ul>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  Guido 1980, Recoleta - CABA
+                </li>
+                <li>
+                  <i class="fa-solid fa-mobile-screen"></i>
+                  Llamanos: +54 911 4343-3443
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i>
+                  Email: veronicamarcela@example.com
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <a href="#inicio" class="arriba">
+        <i class="fa-solid fa-angles-up"></i>
+      </a>
+      <div class="redes">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-skype"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-solid fa-rss"></i></a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
