@@ -2,6 +2,7 @@
 Proyecto Creación de un CV online para trabajar lo aprendido en HTML, CSS Y JS.
 El CV comprende: información personal, experiencia y habilidades.
 
+CONSIGNA
 •	Etapa 1
 Como en todo proyecto, es clave “bajar a papel” lo que vamos a desarrollar, por eso te proponemos que en una hoja escribas toda la información que quieras incluir en el CV, para poder empezar a pensar en qué estructura le darás al proyecto. 
 Como no es necesario que incluyas tu información personal, te proponemos usar esta web(opens in a new tab), de la cual podrás obtener datos personales de personas ficticias. 

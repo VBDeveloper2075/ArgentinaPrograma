@@ -586,8 +586,8 @@ html{
   width: 100%;
 }
 .contacto .col .info{
-  position: absolute;
-  top: 40%;
+  position: relative;
+  top: -120px;
   background-color: #252A2E;
   padding: 20px;
   max-width: 350px;
